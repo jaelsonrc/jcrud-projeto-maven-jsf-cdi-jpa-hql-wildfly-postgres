@@ -11,6 +11,6 @@ Tambem foi usado plugin do mavem para wildfly...
 
  Comandos para maven
 
-  mvn wildfly:deploy
+  mvn wildfly:deploy            
   mvn wildfly:undeploy
 
