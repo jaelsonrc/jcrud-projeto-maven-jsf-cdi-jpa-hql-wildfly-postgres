@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="default"  transaction-type="JTA">
+    
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/PostgresDS</jta-data-source>
+        <class>br.com.jcrud.persistence.model.Contribuinte</class>
+        <class>br.com.jcrud.persistence.model.Imovel</class>
+        <class>br.com.jcrud.persistence.model.Rua</class>
+        <class>br.com.jcrud.persistence.model.Projeto</class>
+
+        <properties>
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect" />
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+            <property name="hibernate.transaction.flush_before_completion" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.default_schema" value="public"/>      
+
+        </properties>
+    </persistence-unit>
+</persistence>
